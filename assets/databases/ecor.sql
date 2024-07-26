@@ -53,6 +53,37 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 COMMIT;
 
+
+--  Inserting Data*
+
+INSERT INTO `inventory` (`itemName`, `itemID`, `stockTotal`, `stockInUse`, `category`, `locations`) VALUES
+('Resistor', 1, 500, 50, 'Discrete, Resistors', b'000000001'),
+('Capacitor', 2, 300, 30, 'Discrete, Capacitors', b'000000010'),
+('Zener Diode', 3, 100, 10, 'Discrete, Diodes', b'000000001'),
+('Breadboard', 4, 50, 10, 'Laboratory Equipment, Breadboards', b'000000001'),
+('Jumper Cables', 5, 100, 20, 'Laboratory Equipment, Cables', b'000000001'),
+('AC and DC Power Supply', 6, 20, 5, 'Power Supply, AC/DC', b'000000001'),
+('Analog Multimeter', 7, 40, 10, 'Measuring Instruments, Multimeters', b'000000001'),
+('Inverter', 8, 15, 3, 'Power Supply, Inverters', b'000000011'),
+('Electric Circuits Training Systems', 9, 25, 5, 'Training Systems, Electric Circuits', b'000000011'),
+('DC Power Supply', 10, 30, 8, 'Power Supply, DC', b'000000011'),
+('Digital Multimeters', 11, 50, 10, 'Measuring Instruments, Digital Multimeters', b'000000011'),
+('Alligator Wires', 12, 200, 50, 'Laboratory Equipment, Wires', b'000000011'),
+('Potentiometer', 13, 100, 20, 'Discrete, Potentiometers', b'000000011'),
+('Inductors', 14, 75, 15, 'Discrete, Inductors', b'000000011'),
+('Analog Oscilloscopes', 15, 20, 5, 'Measuring Instruments, Oscilloscopes', b'000000011'),
+('Logic Probes', 16, 30, 10, 'Measuring Instruments, Logic Probes', b'000000011'),
+('Curve Tracers', 17, 15, 3, 'Measuring Instruments, Curve Tracers', b'000000011'),
+('Signal Generators', 18, 25, 8, 'Measuring Instruments, Signal Generators', b'000000011'),
+('Light Emitting Diode', 19, 200, 50, 'Discrete, LEDs', b'000000011'),
+('Logic Trainers', 20, 10, 2, 'Training Systems, Logic Trainers', b'000000011');
+
+
+-- Insert initial data into the orders table
+INSERT INTO `orders` (`orderNumber`, `orderStart`, `orderEnd`, `idNumber`, `location`, `itemID`, `itemQuantity`) VALUES
+(1, '2024-07-26 10:00:00', '2024-07-27 10:00:00', 12345678, 1, 1, 10),
+(2, '2024-07-26 11:00:00', '2024-07-27 11:00:00', 87654321, 2, 2, 20);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
