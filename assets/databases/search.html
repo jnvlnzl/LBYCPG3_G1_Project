@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #searchBar {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #searchInput {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 300px;
+            box-sizing: border-box;
+        }
+        #results {
+            margin-top: 50px;
+            padding: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        .no-results {
+            color: #888;
+            font-style: italic;
+        }
+    </style>
+    <script>
+        function searchInventory() {
+            const query = document.getElementById('searchInput').value;
+            if (query.length === 0) {
+                document.getElementById('results').innerHTML = "";
+                return;
+            }
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'search_inventory.php?q=' + encodeURIComponent(query), true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById('results').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <div id="searchBar">
+        <input type="text" id="searchInput" onkeyup="searchInventory()" placeholder="Search for equipment...">
+    </div>
+    <div id="results"></div>
+</body>
+</html>
