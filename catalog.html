@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <TITLE> ECOR | Catalog</TITLE>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/styles_ours.css">
+</head>
+<body>
+   <!-- Navigation Bar -->
+<header class="navbar-frame">
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <img src="assets/logo.png" alt="ECOR Logo" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Laboratories
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="reserve.html">M402A</a></li>
+                        <li><a class="dropdown-item" href="#">M402B</a></li>
+                        <li><a class="dropdown-item" href="#">M402C</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">V303A</a></li>
+                        <li><a class="dropdown-item" href="#">V303B</a></li>
+                        <li><a class="dropdown-item" href="#">V311</a></li>
+                        <li><a class="dropdown-item" href="#">V312</a></li>
+                        <li><a class="dropdown-item" href="#">V401</a></li>
+                        <li><a class="dropdown-item" href="#">V402</a></li>
+                        <li><a class="dropdown-item" href="#">V404</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="catalog.html">Catalog</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="btn" href="cart.html">
+                        <i class="fas fa-shopping-bag"></i></a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" action="/search" method="get">
+                    <input class="form-control me-2 search-bar" type="search" placeholder="Search for Equipment/Components" aria-label="Search">
+                    <button class="btn" type="submit">
+                        <i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    <!-- Adjusted Header Below Navbar -->
+    <header class="bg-dark text-white text-center py-3 mt-5">
+        <h1>Product Catalog</h1>
+    </header>
+
+    <main class="container my-4">
+        <!-- Filter Section -->
+        <div class="mb-4">
+            <select id="categoryFilter" class="form-select">
+                <option value="">All Categories</option>
+                <!-- Add options for different categories here -->
+                <option value="category1">Category 1</option>
+                <option value="category2">Category 2</option>
+                <option value="Multimeters">Multimeters</option>
+            </select>
+        </div>
+        <!-- Products Section -->
+        <div class="row">
+            <div class="col-md-4 mb-4 product" data-category="category1">
+                <div class="card">
+                    <img src="assets/equipment_pictures/1.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Resistor</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details1')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 1')">Reserve</button>
+                        <div id="details1" class="product-details mt-2">
+                            <p>A passive electrical component with two terminals that are used for either limiting or regulating the flow of electric current in electrical circuits. <br></p>
+                            <p>Quantity: </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="category2">
+                <div class="card">
+                    <img src="assets/equipment_pictures/2.jpg" class="card-img-top" alt="Capacitor">
+                    <div class="card-body">
+                        <h5 class="card-title">Capacitor</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details2')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Capacitor')">Reserve</button>
+                        <div id="details2" class="product-details mt-2">
+                            <p>A capacitor is a two-terminal electrical device that can store energy in the form of an electric charge. It consists of two electrical conductors that are separated by a distance. The space between the conductors may be filled by vacuum or with an insulating material known as a dielectric.<br></p>
+                            <p>Quantity: </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="category3">
+                <div class="card">
+                    <img src="assets/equipment_pictures/3.jpg" class="card-img-top" alt="Diode">
+                    <div class="card-body">
+                        <h5 class="card-title">Diode</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details3')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Zener Diode')">Reserve</button>
+                        <div id="details3" class="product-details mt-2">
+                            <p>A diode is a semiconductor device that essentially acts as a one-way switch for current. It allows current to flow easily in one direction, but severely restricts current from flowing in the opposite direction</p><br>
+                            <p>Quantity: </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional Products -->
+            <div class="col-md-4 mb-4 product" data-category="category1">
+                <div class="card">
+                    <img src="assets/equipment_pictures/4.jpg" class="card-img-top" alt="Product 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 4</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details4')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 4')">Reserve</button>
+                        <div id="details4" class="product-details mt-2">
+                            <p>Details about Product 4.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="category2">
+                <div class="card">
+                    <img src="assets/equipment_pictures/5.jpg" class="card-img-top" alt="Product 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 5</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details5')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 5')">Reserve</button>
+                        <div id="details5" class="product-details mt-2">
+                            <p>Details about Product 5.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="category3">
+                <div class="card">
+                    <img src="assets/equipment_pictures/6.jpg" class="card-img-top" alt="Product 6">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 6</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details6')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 6')">Reserve</button>
+                        <div id="details6" class="product-details mt-2">
+                            <p>Details about Product 6.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="Multimeters">
+                <div class="card">
+                    <img src="assets/equipment_pictures/7.jpg" class="card-img-top" alt="Product 7">
+                    <div class="card-body">
+                        <h5 class="card-title">Analog Multimeter</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
+                        <div id="details7" class="product-details mt-2">
+                            <p>Details about Product 7.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="category1">
+                <div class="card">
+                    <img src="assets/equipment_pictures/8.jpg" class="card-img-top" alt="Product 8">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 8</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
+                        <div id="details7" class="product-details mt-2">
+                            <p>Details about Product 7.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="category1">
+                <div class="card">
+                    <img src="assets/equipment_pictures/9.jpg" class="card-img-top" alt="Product 9">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 9</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
+                        <div id="details7" class="product-details mt-2">
+                            <p>Details about Product 7.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="category1">
+                <div class="card">
+                    <img src="assets/equipment_pictures/10.jpg" class="card-img-top" alt="Product 10">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 10</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
+                        <div id="details7" class="product-details mt-2">
+                            <p>Details about Product 7.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="Multimeters">
+                <div class="card">
+                    <img src="assets/equipment_pictures/11.jpg" class="card-img-top" alt="Digital Multimeter">
+                    <div class="card-body">
+                        <h5 class="card-title">Digital Multimeter</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
+                        <div id="details7" class="product-details mt-2">
+                            <p>Details about Product 7.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="category1">
+                <div class="card">
+                    <img src="assets/equipment_pictures/12.jpg" class="card-img-top" alt="Product 12">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 12</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
+                        <div id="details7" class="product-details mt-2">
+                            <p>Details about Product 7.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="category1">
+                <div class="card">
+                    <img src="assets/equipment_pictures/13.jpg" class="card-img-top" alt="Product 13">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 13</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
+                        <div id="details7" class="product-details mt-2">
+                            <p>Details about Product 134.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="category1">
+                <div class="card">
+                    <img src="assets/equipment_pictures/14.jpg" class="card-img-top" alt="Product 14">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 14</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
+                        <div id="details7" class="product-details mt-2">
+                            <p>Details about Product 134.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="category1">
+                <div class="card">
+                    <img src="assets/equipment_pictures/15.jpg" class="card-img-top" alt="Product 15">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 15</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
+                        <div id="details7" class="product-details mt-2">
+                            <p>Details about Product 134.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script>
+        b
+        function showDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                details.style.display = "block";
+            }
+        }
+
+        function addToCart(productName) {
+            alert(productName + " has been added to your cart!");
+           
+        }
+
+        document.getElementById('categoryFilter').addEventListener('change', function() {
+            var selectedCategory = this.value;
+            var products = document.querySelectorAll('.product');
+            products.forEach(function(product) {
+                if (selectedCategory === "" || product.getAttribute('data-category') === selectedCategory) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
