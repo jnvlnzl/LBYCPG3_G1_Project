@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOR | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      function searchInventory() {
+          const query = document.getElementById('searchInput').value;
+          const resultsContainer = document.getElementById('results');
+          resultsContainer.innerHTML = ""; // Clear previous results
+
+          if (query.length === 0) {
+              resultsContainer.classList.remove('show');
+              return;
+          }
+
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', 'search_inventory.php?q=' + encodeURIComponent(query), true);
+          xhr.onreadystatechange = function () {
+              if (xhr.readyState == 4 && xhr.status == 200) {
+                  const response = xhr.responseText;
+                  if (response) {
+                      resultsContainer.innerHTML = response;
+                      resultsContainer.classList.add('show');
+                  } else {
+                      resultsContainer.classList.remove('show');
+                  }
+              }
+          };
+          xhr.send();
+      }
+    </script>
+    <style>
+        .dropdown-menu.show {
+            display: block;
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            width: 100%;
+            max-height: 200px;
+            overflow-y: auto;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: .25rem;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar-frame">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="home.html">
+                    <i class="fas fa-robot"></i>ECOR
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Laboratories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="reserve.html">M402A</a></li>
+                                <li><a class="dropdown-item" href="#">M402B</a></li>
+                                <li><a class="dropdown-item" href="#">M402C</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">V303A</a></li>
+                                <li><a class="dropdown-item" href="#">V303B</a></li>
+                                <li><a class="dropdown-item" href="#">V311</a></li>
+                                <li><a class="dropdown-item" href="#">V312</a></li>
+                                <li><a class="dropdown-item" href="#">V401</a></li>
+                                <li><a class="dropdown-item" href="#">V402</a></li>
+                                <li><a class="dropdown-item" href="#">V404</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalog.html">Catalog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn" href="cart.html">
+                                <i class="fas fa-shopping-bag"></i></a>
+                        </li>
+                    </ul>
+                    <div class="search-container position-relative">
+                        <form class="d-flex" role="search" action="#" method="get" onsubmit="return false;">
+                            <input id="searchInput" class="form-control me-2 search-bar" type="search" placeholder="Search for Equipment/Components" aria-label="Search" onkeyup="searchInventory()">
+                            <button class="btn" type="button" onclick="searchInventory()">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                        <div id="results" class="dropdown-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section id="home">
+        <div class="container">
+            <h1>ECOR</h1>
+            <h4>DECE's <span>Electronic Component Reservation</span> System</h4>
+            <p>lagay kayo tagline</p><br>
+            <a href="reserve.html" class="btn btn-primary">Reserve Now!</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>About Us</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies congue mi, eu scelerisque ante dapibus congue. 
+                        In sit amet malesuada erat. Nunc ut viverra tellus. Vivamus aliquam tempor arcu ut placerat. Mauris eros massa, pretium 
+                        vel tristique eget, vestibulum vitae metus. Aliquam sem sem, aliquam vitae tristique vitae, efficitur vel arcu. 
+                        Etiam bibendum odio vitae pulvinar pulvinar.
+                        <br><br>
+                        Maecenas ultricies posuere felis non gravida. Praesent vestibulum nunc nec blandit faucibus. Vestibulum scelerisque non 
+                        nulla vitae finibus. Nulla tincidunt enim sed lectus pulvinar congue. Duis porta non felis quis condimentum. Curabitur cursus, 
+                        dolor non consequat pretium, neque lectus bibendum eros, vitae hendrerit lorem dolor laoreet ipsum. Nullam vehicula ut ante non 
+                        fringilla. Phasellus lorem sapien, vulputate eu suscipit non, dignissim nec lacus. Donec quis mi hendrerit, congue massa eget, 
+                        gravida tortor.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/about.jpg" alt="Electrical Machine Laboratory" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h6>Contact Us</h6>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i><span><a href="mailto:dece.ecor@dlsu.edu.ph" class="email-link">dece.ecor@dlsu.edu.ph</a></span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i><span>0263729</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i><span>V312, Velasco Building, De La Salle University Taft</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h6>Authors</h6>
+                    <ul class="list-unstyled">
+                        <li>Gabriel Ocampo | <a href="mailto:gabriel_ocampo@dlsu.edu.ph" class="email-link">gabriel_ocampo@dlsu.edu.ph</a></li>
+                        <li>Michael Aringo | <a href="mailto:michael_aringo@dlsu.edu.ph" class="email-link">michael_aringo@dlsu.edu.ph</a></li>
+                        <li>Henson Lee | <a href="mailto:henson_lee@dlsu.edu.ph" class="email-link">henson_lee@dlsu.edu.ph</a></li>
+                        <li>Jared Ong | <a href="mailto:jared_ong@dlsu.edu.ph" class="email-link">jared_ong@dlsu.edu.ph</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-9ndCSw2G3FzS5TWmjWuMNTnO8PqkUew5dn2H4RZ1nC9ImFYhEue8jzchxeeblK8J" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-vH5ytTSexIHN9y/IeUQtb9gnO6kL7Hb8RxN+UwG/2CKtxofxWb5pehxR+BOZBvbf" crossorigin="anonymous"></script>
+</body>
+</html>
