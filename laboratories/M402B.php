@@ -1,11 +1,6 @@
 <?php
 
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "ecor";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
+include 'db_connection.php';
 
 $bitPosition = 1;
 $bitValue = 1 << $bitPosition;
@@ -118,8 +113,8 @@ $items = $conn->query($sql);
                   <div class="description">
                     <p class="itemName"><?php echo $row["itemName"]; ?></p>
                   </div>
-                  <button class="details">View Details</button>
-                  <button class="reserve">Reserve</button>
+                  <!--<button class="details">View Details</button>
+                  <button class="reserve">Reserve</button>-->
                 </div>
               </div>
             <?php } ?>
