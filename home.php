@@ -1,3 +1,25 @@
+<?php
+require 'db_connection.php';
+
+if (isset($_GET['q'])) {
+    $searchQuery = mysqli_real_escape_string($conn, $_GET['q']);
+
+    $sql = "SELECT * FROM inventory WHERE itemName LIKE '%$searchQuery%' OR category LIKE '%$searchQuery%'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo '<div class="card">';
+            echo '<div class="image"><img src="' . $row["img"] . '" alt=""></div>';
+            echo '<div class="description"><p class="itemName">' . $row["itemName"] . '</p></div>';
+            echo '</div>';
+        }
+    } else {
+        echo '<p>No results found</p>';
+    }
+}
+?>
+
 <!DOCTYPE HTML>
 <HTML LANG="en">
     <HEAD>
@@ -8,51 +30,25 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
         <link rel="stylesheet" href="styles_ours.css">
-        <script>
-          function searchInventory() {
-              const query = document.getElementById('searchInput').value;
-              const resultsContainer = document.getElementById('results');
-              resultsContainer.innerHTML = ""; // Clear previous results
-    
-              if (query.length === 0) {
-                  resultsContainer.classList.remove('show');
-                  return;
-              }
-    
-              const xhr = new XMLHttpRequest();
-              xhr.open('GET', 'search_inventory.php?q=' + encodeURIComponent(query), true);
-              xhr.onreadystatechange = function () {
-                  if (xhr.readyState == 4 && xhr.status == 200) {
-                      const response = xhr.responseText;
-                      if (response) {
-                          resultsContainer.innerHTML = response;
-                          resultsContainer.classList.add('show');
-                      } else {
-                          resultsContainer.classList.remove('show');
-                      }
-                  }
-              };
-              xhr.send();
-          }
-        </script>
-        <style>
-            .dropdown-menu.show {
-                display: block;
-            }
-            .dropdown-menu {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                z-index: 1000;
-                width: 100%;
-                max-height: 200px;
-                overflow-y: auto;
-                background-color: #ffffff;
-                border: 1px solid #ccc;
-                border-radius: .25rem;
-                box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
-            }
-        </style>
+    <script>
+      function searchInventory() {
+        var query = document.getElementById('searchQuery').value;
+        if (query.length > 2) { 
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'search.php?q=' + encodeURIComponent(query), true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById('results').innerHTML = xhr.responseText;
+                    document.getElementById('results').style.display = 'block';
+                }
+            };
+            xhr.send();
+        } else {
+            document.getElementById('results').innerHTML = '';
+            document.getElementById('results').style.display = 'none';
+        }
+    }
+    </script>
     </HEAD>
     <BODY>
         <!-- Navigation Bar -->
@@ -103,13 +99,13 @@
                             </li>
                         </ul>
                         <div class="search-container position-relative">
-                          <form class="d-flex" role="search" action="#" method="get" onsubmit="return false;">
-                              <input id="searchInput" class="form-control me-2 search-bar" type="search" placeholder="Search for Equipment/Components" aria-label="Search" onkeyup="searchInventory()">
-                              <button class="btn" type="button" onclick="searchInventory()">
+                          <form class="d-flex" role="search" action="results.php" method="get">
+                              <input type="text" id="searchQuery" name="q" class="form-control" placeholder="Search for items..." required>
+                              <button class="btn" type="submit">
                                   <i class="fas fa-search"></i>
                               </button>
                           </form>
-                          <div id="results" class="dropdown-menu"></div>
+                        </div>
                       </div>
                     </div>
                 </div>
