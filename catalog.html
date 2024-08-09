@@ -79,178 +79,204 @@
             <select id="categoryFilter" class="form-select">
                 <option value="">All Categories</option>
                 <!-- Add options for different categories here -->
-                <option value="category1">Category 1</option>
-                <option value="category2">Category 2</option>
-                <option value="Multimeters">Multimeters</option>
+                <option value="Discrete">Discrete</option>
+                <option value="Laboratory Equipment">Laboratory Equipment</option>
+                <option value="Power Supply">Power Supply</option>
+                <option value="Measuring Instruments">Measuring Instruments</option>
+                <option value="Training Systems">Training Systems</option>
             </select>
         </div>
         <!-- Products Section -->
         <div class="row">
-            <div class="col-md-4 mb-4 product" data-category="category1">
+            <div class="col-md-4 mb-4 product" data-category="Discrete">
                 <div class="card">
-                    <img src="assets/equipment_pictures/1.jpg" class="card-img-top" alt="Product 1">
+                    <img src="assets/equipment_pictures/1.jpg" class="card-img-top" alt="Resistor">
                     <div class="card-body">
                         <h5 class="card-title">Resistor</h5>
-                        <button class="btn btn-primary" onclick="showDetails('details1')">View Details</button><br>
-                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 1')">Reserve</button>
-                        <div id="details1" class="product-details mt-2">
-                            <p>A passive electrical component with two terminals that are used for either limiting or regulating the flow of electric current in electrical circuits. <br></p>
-                            <p>Quantity: </p>
+                        <button class="btn btn-primary" onclick="showDetails('Resistor')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Resistor')">Reserve</button>
+                        <div id="Resistor" class="product-details mt-2" style="display: none;">
+                            <p>Quantity: <span class="quantity">500</span></p>
+                            <p>A passive electrical component with two terminals that are used for either limiting or regulating the flow of electric current in electrical circuits. The main purpose of resistor is to reduce the current flow and to lower the voltage in any particular portion of the circuit.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 product" data-category="category2">
+            <div class="col-md-4 mb-4 product" data-category="Discrete">
                 <div class="card">
                     <img src="assets/equipment_pictures/2.jpg" class="card-img-top" alt="Capacitor">
                     <div class="card-body">
                         <h5 class="card-title">Capacitor</h5>
-                        <button class="btn btn-primary" onclick="showDetails('details2')">View Details</button><br>
+                        <button class="btn btn-primary" onclick="showDetails('Capacitor')">View Details</button><br>
                         <button class="btn btn-reserve mt-2" onclick="addToCart('Capacitor')">Reserve</button>
-                        <div id="details2" class="product-details mt-2">
-                            <p>A capacitor is a two-terminal electrical device that can store energy in the form of an electric charge. It consists of two electrical conductors that are separated by a distance. The space between the conductors may be filled by vacuum or with an insulating material known as a dielectric.<br></p>
-                            <p>Quantity: </p>
+                        <div id="Capacitor" class="product-details mt-2">
+                            <p>Quantity: <span class="quantity">300</span></p>
+                            <p>A capacitor is a two-terminal electrical device that can store energy in the form of an electric charge. It consists of two electrical conductors that are separated by a distance. The space between the conductors may be filled by vacuum or with an insulating material known as a dielectric.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 product" data-category="category3">
+            <div class="col-md-4 mb-4 product" data-category="Discrete">
                 <div class="card">
-                    <img src="assets/equipment_pictures/3.jpg" class="card-img-top" alt="Diode">
+                    <img src="assets/equipment_pictures/3.jpg" class="card-img-top" alt="Zener Diode">
                     <div class="card-body">
-                        <h5 class="card-title">Diode</h5>
+                        <h5 class="card-title">Zener Diode</h5>
                         <button class="btn btn-primary" onclick="showDetails('details3')">View Details</button><br>
                         <button class="btn btn-reserve mt-2" onclick="addToCart('Zener Diode')">Reserve</button>
                         <div id="details3" class="product-details mt-2">
+                            <p>Quantity: 100 </p>
                             <p>A diode is a semiconductor device that essentially acts as a one-way switch for current. It allows current to flow easily in one direction, but severely restricts current from flowing in the opposite direction</p><br>
-                            <p>Quantity: </p>
+                            
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Additional Products -->
-            <div class="col-md-4 mb-4 product" data-category="category1">
+            <div class="col-md-4 mb-4 product" data-category="Laboratory Equipment">
                 <div class="card">
-                    <img src="assets/equipment_pictures/4.jpg" class="card-img-top" alt="Product 4">
+                    <img src="assets/equipment_pictures/4.jpg" class="card-img-top" alt="Breadboard">
                     <div class="card-body">
-                        <h5 class="card-title">Product 4</h5>
-                        <button class="btn btn-primary" onclick="showDetails('details4')">View Details</button><br>
-                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 4')">Reserve</button>
-                        <div id="details4" class="product-details mt-2">
-                            <p>Details about Product 4.</p>
+                        <h5 class="card-title">Breadboard</h5>
+                        <button class="btn btn-primary" onclick="showDetails('Breadboard')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Breadboard')">Reserve</button>
+                        <div id="Breadboard" class="product-details mt-2">
+                            <p>Quantity: 50</p>
+                            <p>A breadboard (sometimes called protoboard) is essentially the foundation to construct and prototype electronics. A breadboard allows for easy and quick creation of temporary electronic circuits or to carry out experiments with circuit design.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 product" data-category="category2">
+            <div class="col-md-4 mb-4 product" data-category="Laboratory Equipment">
                 <div class="card">
-                    <img src="assets/equipment_pictures/5.jpg" class="card-img-top" alt="Product 5">
+                    <img src="assets/equipment_pictures/5.jpg" class="card-img-top" alt="Jumper Wires">
                     <div class="card-body">
-                        <h5 class="card-title">Product 5</h5>
+                        <h5 class="card-title">Jumper Wires</h5>
                         <button class="btn btn-primary" onclick="showDetails('details5')">View Details</button><br>
-                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 5')">Reserve</button>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Wires')">Reserve</button>
                         <div id="details5" class="product-details mt-2">
-                            <p>Details about Product 5.</p>
+                            <p>Quantity: 100</p>
+                            <p>Jumper wires are simply wires that have connector pins at each end, allowing them to be used to connect two points to each other without soldering. Jumper wires are typically used with breadboards and other prototyping tools in order to make it easy to change a circuit as needed. Fairly simple. In fact, it doesn’t get much more basic than jumper wires.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 product" data-category="category3">
+            <div class="col-md-4 mb-4 product" data-category="Power Supply">
                 <div class="card">
-                    <img src="assets/equipment_pictures/6.jpg" class="card-img-top" alt="Product 6">
+                    <img src="assets/equipment_pictures/6.jpg" class="card-img-top" alt="AC/DC Power Supply">
                     <div class="card-body">
-                        <h5 class="card-title">Product 6</h5>
+                        <h5 class="card-title">AC/DC Power Supply</h5>
                         <button class="btn btn-primary" onclick="showDetails('details6')">View Details</button><br>
-                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 6')">Reserve</button>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('AC/DC Power Supply')">Reserve</button>
                         <div id="details6" class="product-details mt-2">
-                            <p>Details about Product 6.</p>
+                            <p>Quantity: 20</p>
+                            <p>An AC-DC power supply, often known as an adapter, is a device that takes electricity from a grid and converts it to a different current, frequency, and voltage. AC-DC power supplies are required to give the correct amount of power to an electrical component.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 product" data-category="Multimeters">
+            <div class="col-md-4 mb-4 product" data-category="Measuring Instruments">
                 <div class="card">
-                    <img src="assets/equipment_pictures/7.jpg" class="card-img-top" alt="Product 7">
+                    <img src="assets/equipment_pictures/7.jpg" class="card-img-top" alt="Analog Multimeter">
                     <div class="card-body">
                         <h5 class="card-title">Analog Multimeter</h5>
                         <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
-                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Analog Multimeter')">Reserve</button>
                         <div id="details7" class="product-details mt-2">
-                            <p>Details about Product 7.</p>
+                            <p>Quantity: 40</p>
+                            <p>Analog multimeters are electrical test instruments which are used to measure voltage, current, resistance, frequency and signal power. Analog multimeters use a needle along a scale. Switched range analog multimeters are very cheap but are difficult for beginners to read accurately, especially on resistance scales.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 product" data-category="category1">
+            <div class="col-md-4 mb-4 product" data-category="Power Supply">
                 <div class="card">
-                    <img src="assets/equipment_pictures/8.jpg" class="card-img-top" alt="Product 8">
+                    <img src="assets/equipment_pictures/8.jpg" class="card-img-top" alt="Inverter">
                     <div class="card-body">
-                        <h5 class="card-title">Product 8</h5>
-                        <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
-                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
-                        <div id="details7" class="product-details mt-2">
-                            <p>Details about Product 7.</p>
+                        <h5 class="card-title">Inverter</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details8')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Inverter')">Reserve</button>
+                        <div id="details8" class="product-details mt-2">
+                            <p>Quantity: 15</p>
+                            <p>Inverters convert DC power to AC power. DC power, represented by a straight line, can be characterized by its voltage and current. AC power has voltage and current, but is also characterized by its frequency and waveform, with a pure sine wave as the ideal.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 product" data-category="category1">
+            <div class="col-md-4 mb-4 product" data-category="Training Systems">
                 <div class="card">
                     <img src="assets/equipment_pictures/9.jpg" class="card-img-top" alt="Product 9">
                     <div class="card-body">
-                        <h5 class="card-title">Product 9</h5>
-                        <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
-                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
-                        <div id="details7" class="product-details mt-2">
-                            <p>Details about Product 7.</p>
+                        <h5 class="card-title">Electric Circuits Training Systems</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details9')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Electric Circuits Training Systems')">Reserve</button>
+                        <div id="details9" class="product-details mt-2">
+                            <p>Quantity: 25</p>
+                            <p>A basic electricity trainer setup typically includes a power supply, a breadboard, and various components such as resistors, capacitors, and LEDs. This Kit perfectly demonstrates basic concepts like voltage, current, and resistance. The power supply provides power to the breadboard, which helps build circuits</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 product" data-category="category1">
+            <div class="col-md-4 mb-4 product" data-category="Power Supply">
                 <div class="card">
-                    <img src="assets/equipment_pictures/10.jpg" class="card-img-top" alt="Product 10">
+                    <img src="assets/equipment_pictures/10.jpg" class="card-img-top" alt="DC Power Supply">
                     <div class="card-body">
-                        <h5 class="card-title">Product 10</h5>
-                        <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
-                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
-                        <div id="details7" class="product-details mt-2">
-                            <p>Details about Product 7.</p>
+                        <h5 class="card-title">DC Power Supply</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details10')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('DC Power Supply')">Reserve</button>
+                        <div id="details10" class="product-details mt-2">
+                            <p>Quantity: 30</p>
+                            <p>A DC power supply provides direct current (DC) voltage to power and test a device under test such as a circuit board or electronic product. A DC power supply typically sits on an engineer's work area or bench and is often referred to as a bench power supply.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 product" data-category="Multimeters">
+            <div class="col-md-4 mb-4 product" data-category="Measuring Instruments">
                 <div class="card">
                     <img src="assets/equipment_pictures/11.jpg" class="card-img-top" alt="Digital Multimeter">
                     <div class="card-body">
                         <h5 class="card-title">Digital Multimeter</h5>
-                        <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
-                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
-                        <div id="details7" class="product-details mt-2">
-                            <p>Details about Product 7.</p>
+                        <button class="btn btn-primary" onclick="showDetails('details11')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Digital Multimeter')">Reserve</button>
+                        <div id="details11" class="product-details mt-2">
+                            <p>Quantity: 50</p>
+                            <p>A digital multimeter (DMM) is a versatile electronic device used to measure various electrical properties, including voltage, current, and resistance. The device displays the measurements on a digital screen, making it easy to read and understand the results accurately.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 product" data-category="category1">
+            <div class="col-md-4 mb-4 product" data-category="Laboratory Equipment">
                 <div class="card">
-                    <img src="assets/equipment_pictures/12.jpg" class="card-img-top" alt="Product 12">
+                    <img src="assets/equipment_pictures/12.jpg" class="card-img-top" alt="Alligator Wires">
                     <div class="card-body">
-                        <h5 class="card-title">Product 12</h5>
-                        <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
-                        <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
-                        <div id="details7" class="product-details mt-2">
-                            <p>Details about Product 7.</p>
+                        <h5 class="card-title">Alligator Wires</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details12')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Alligator Wires')">Reserve</button>
+                        <div id="details12" class="product-details mt-2"></div>
+                        <p>Quantity: 200</p>
+                        <p>A crocodile clip or alligator clip is a plier-like spring-tensioned metal clip with elongated, serrated jaws that is used for creating a temporary electrical connection. This simple mechanical device gets its name from the resemblance of its serrated jaws to the toothed jaws of a crocodile or alligator.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 product" data-category="category1">
+            <div class="col-md-4 mb-4 product" data-category="Discrete">
                 <div class="card">
-                    <img src="assets/equipment_pictures/13.jpg" class="card-img-top" alt="Product 13">
+                    <img src="assets/equipment_pictures/13.jpg" class="card-img-top" alt="Potentiometer">
                     <div class="card-body">
-                        <h5 class="card-title">Product 13</h5>
+                        <h5 class="card-title">Potentiometer</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details13')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Potentiometer')">Reserve</button>
+                        <div id="details13" class="product-details mt-2">
+                            <p>Quantity: 13</p>
+                            <p>A potentiometer is a manually adjustable variable resistor with 3 terminals. Two of the terminals are connected to the opposite ends of a resistive element, and the third terminal connects to a sliding contact, called a wiper, moving over the resistive element.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="Discrete">
+                <div class="card">
+                    <img src="assets/equipment_pictures/14.jpg" class="card-img-top" alt="Inductor">
+                    <div class="card-body">
+                        <h5 class="card-title">Inductor</h5>
                         <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
                         <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
                         <div id="details7" class="product-details mt-2">
@@ -259,11 +285,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 product" data-category="category1">
+            <div class="col-md-4 mb-4 product" data-category="Measuring Instruments">
                 <div class="card">
-                    <img src="assets/equipment_pictures/14.jpg" class="card-img-top" alt="Product 14">
+                    <img src="assets/equipment_pictures/15.jpg" class="card-img-top" alt="Analog Oscilloscope">
                     <div class="card-body">
-                        <h5 class="card-title">Product 14</h5>
+                        <h5 class="card-title">Analog Oscilloscope</h5>
                         <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
                         <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
                         <div id="details7" class="product-details mt-2">
@@ -272,11 +298,50 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 product" data-category="category1">
+            <div class="col-md-4 mb-4 product" data-category="Measuring Instruments">
                 <div class="card">
-                    <img src="assets/equipment_pictures/15.jpg" class="card-img-top" alt="Product 15">
+                    <img src="assets/equipment_pictures/16.jpg" class="card-img-top" alt="Logic Probes">
                     <div class="card-body">
-                        <h5 class="card-title">Product 15</h5>
+                        <h5 class="card-title">Logic Probes</h5>
+                        <button class="btn btn-primary" onclick="showDetails('Logic Probes')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Logic Probes')">Reserve</button>
+                        <div id="details7" class="product-details mt-2">
+                            <p>Details about Product 134.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="Measuring Instruments">
+                <div class="card">
+                    <img src="assets/equipment_pictures/17.jpg" class="card-img-top" alt="Curve Tracers">
+                    <div class="card-body">
+                        <h5 class="card-title">Curve Tracers</h5>
+                        <button class="btn btn-primary" onclick="showDetails('Curve Tracers')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Curve Tracers')">Reserve</button>
+                        <div id="details7" class="product-details mt-2">
+                            <p>Details about Product 134.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="Measuring Instruments">
+                <div class="card">
+                    <img src="assets/equipment_pictures/18.jpg" class="card-img-top" alt="Signal Generators">
+                    <div class="card-body">
+                        <h5 class="card-title">Signal Generators</h5>
+                        <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Signal Generators')">Reserve</button>
+                        <div id="details7" class="product-details mt-2">
+                            <p>Details about Product 134.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 product" data-category="Discrete">
+                <div class="card">
+                    <img src="assets/equipment_pictures/19.jpg" class="card-img-top" alt="Light Emitting Diode">
+                    <div class="card-body">
+                        <h5 class="card-title">Light Emitting Diode</h5>
                         <button class="btn btn-primary" onclick="showDetails('details7')">View Details</button><br>
                         <button class="btn btn-reserve mt-2" onclick="addToCart('Product 7')">Reserve</button>
                         <div id="details7" class="product-details mt-2">
@@ -285,6 +350,20 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-4 mb-4 product" data-category="Training Systems">
+                <div class="card">
+                    <img src="assets/equipment_pictures/20.jpg" class="card-img-top" alt="Logic Trainers">
+                    <div class="card-body">
+                        <h5 class="card-title">Logic Trainers</h5>
+                        <button class="btn btn-primary" onclick="showDetails('Logic Trainers')">View Details</button><br>
+                        <button class="btn btn-reserve mt-2" onclick="addToCart('Logic Trainers')">Reserve</button>
+                        <div id="details7" class="product-details mt-2">
+                            <p>Details about Product 134.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </main>
 
@@ -292,21 +371,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
     <script>
-        b
-        function showDetails(id) {
-            var details = document.getElementById(id);
-            if (details.style.display === "block") {
-                details.style.display = "none";
-            } else {
-                details.style.display = "block";
+
+    function showDetails(itemId) {
+            var detailsContainer = document.getElementById(itemId);
+            if (detailsContainer) {
+                detailsContainer.style.display = detailsContainer.style.display === 'none' ? 'block' : 'none';
             }
         }
 
+    
         function addToCart(productName) {
             alert(productName + " has been added to your cart!");
-           
         }
-
+    
         document.getElementById('categoryFilter').addEventListener('change', function() {
             var selectedCategory = this.value;
             var products = document.querySelectorAll('.product');
@@ -319,6 +396,8 @@
             });
         });
     </script>
+    
+    
 
     <script src="script.js"></script>
 </body>
