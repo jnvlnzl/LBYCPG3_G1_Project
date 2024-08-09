@@ -121,7 +121,7 @@
           <div class="container">
             <h1>E-CORE</h1>
             <h4>DECE's <span>Electronic Component Reservation</span> System</h4>
-            <p>lagay kayo tagline</p><br>
+            <p>Your Electronic Component Reservations with Precision</p><br>
             <a href="reserve.html" class="btn btn-primary">Reserve Now!</a>
           </div>
         </section>
@@ -132,16 +132,13 @@
             <div class="row">
               <div class="col-md-6">
                 <h1>About Us</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultricies congue mi, eu scelerisque ante dapibus congue. 
-                  In sit amet malesuada erat. Nunc ut viverra tellus. Vivamus aliquam tempor arcu ut placerat. Mauris eros massa, pretium 
-                  vel tristique eget, vestibulum vitae metus. Aliquam sem sem, aliquam vitae tristique vitae, efficitur vel arcu. 
-                  Etiam bibendum odio vitae pulvinar pulvinar.
+                <p>E-CORE is the cutting-edge Electronic Component Reservation System developed exclusively for DECE (Department of Electronic and Computer Engineering). 
+                  Our platform is designed to simplify the management and reservation of electronic components, providing an efficient and user-friendly solution to meet 
+                  the needs of our department.
                   <br><br>
-                  Maecenas ultricies posuere felis non gravida. Praesent vestibulum nunc nec blandit faucibus. Vestibulum scelerisque non 
-                  nulla vitae finibus. Nulla tincidunt enim sed lectus pulvinar congue. Duis porta non felis quis condimentum. Curabitur cursus, 
-                  dolor non consequat pretium, neque lectus bibendum eros, vitae hendrerit lorem dolor laoreet ipsum. Nullam vehicula ut ante non 
-                  fringilla. Phasellus lorem sapien, vulputate eu suscipit non, dignissim nec lacus. Donec quis mi hendrerit, congue massa eget, 
-                  gravida tortor.</p>
+                  At E-CORE, our mission is to streamline the process of reserving electronic components, ensuring that our students, faculty, and staff have seamless 
+                  access to the components they need for their projects and research. We aim to enhance productivity and collaboration within the DECE community by offering 
+                  a system that is both intuitive and reliable.</p>
               </div>
               <div class="col-md-6">
                 <img src="assets/about.jpg" alt="Electrical Machine Laboratory" class="img-fluid">
