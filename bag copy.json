@@ -1,0 +1,20 @@
+[
+    {
+        "itemID": 1,
+        "itemName": "Resistor",
+        "quantity": 2,
+        "image": "assets/equipment_pictures/1.jpg"
+    },
+    {
+        "itemID": 2,
+        "itemName": "Capacitor",
+        "quantity": 2,
+        "image": "assets/equipment_pictures/2.jpg"
+    },
+    {
+        "itemID": 3,
+        "itemName": "Multimeter",
+        "quantity": 1,
+        "image": "assets/equipment_pictures/3.jpg"
+    }
+]

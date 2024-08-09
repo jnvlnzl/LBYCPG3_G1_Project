@@ -94,7 +94,7 @@ if (isset($_GET['q'])) {
                               <a class="nav-link" href="#contact">Contact</a>
                             </li>
                             <li class="nav-item">
-                              <a class="btn" href="cart.html">
+                              <a class="btn" href="bag.php">
                                 <i class="fas fa-shopping-bag"></i></a>
                             </li>
                         </ul>
@@ -118,7 +118,7 @@ if (isset($_GET['q'])) {
             <h1>E-CORE</h1>
             <h4>DECE's <span>Electronic Component Reservation</span> System</h4>
             <p>Your Electronic Component Reservations with Precision</p><br>
-            <a href="reserve.html" class="btn btn-primary">Reserve Now!</a>
+            <a href="catalog.html" class="btn btn-primary">Reserve Now!</a>
           </div>
         </section>
 

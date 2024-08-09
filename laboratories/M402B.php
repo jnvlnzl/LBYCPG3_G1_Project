@@ -26,7 +26,7 @@ $items = $conn->query($sql);
         <header class="navbar-frame">
             <nav class="navbar navbar-expand-lg fixed-top">
                 <div class="container">
-                    <a class="navbar-brand" href="../home.html">
+                    <a class="navbar-brand" href="../home.php">
                       <img src="../assets/logo.png" alt="ECOR Logo" class="navbar-logo">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,10 +35,10 @@ $items = $conn->query($sql);
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="../home.html">Home</a>
+                                <a class="nav-link" href="../home.php">Home</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="../home.html#about">About</a>
+                              <a class="nav-link" href="../home.php#about">About</a>
                             </li>
                             <li class="nav-item dropdown">
                               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,7 +65,7 @@ $items = $conn->query($sql);
                               <a class="nav-link" href="#contact">Contact</a>
                             </li>
                             <li class="nav-item">
-                              <a class="btn" href="cart.html">
+                              <a class="btn" href="bag.php">
                                 <i class="fas fa-shopping-bag"></i></a>
                             </li>
                         </ul>

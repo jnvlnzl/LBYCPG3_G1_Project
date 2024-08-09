@@ -65,7 +65,7 @@ $items = $conn->query($sql);
                               <a class="nav-link" href="#contact">Contact</a>
                             </li>
                             <li class="nav-item">
-                              <a class="btn" href="cart.html">
+                              <a class="btn" href="bag.php">
                                 <i class="fas fa-shopping-bag"></i></a>
                             </li>
                         </ul>
